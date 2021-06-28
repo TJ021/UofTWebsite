@@ -1,0 +1,35 @@
+<?php
+	// need to get id for the user logged in
+    $sql = $conn->prepare("SELECT `assignment`,`mark` FROM marks WHERE id='1'"); 
+    $sql->execute() ;
+?>
+
+
+<html>
+<head>
+</head>
+<body>
+
+	<table>
+    <thead>
+        <tr>
+            <th>Assignment</th>
+            <th>Mark</th>
+			<th>Request remark</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while( $row = $sql->fetch()) : ?>
+        <tr>
+            <td><?php echo $row['assignment']; ?></td>
+            <td><?php echo $row['mark']; ?></td>
+			
+			<?php //the value for the checkbox tells us which ones to remark just need the reason part?>
+			<td><input type="checkbox" class="chcktbl" value="<?php $row[assignment]?>"/></td>
+        </tr>
+        <?php endwhile ?>
+    </tbody>
+</table>
+
+</body>
+</html>

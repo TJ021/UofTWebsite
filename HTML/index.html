@@ -1,0 +1,105 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <style>
+    body {
+     background-image: url("pics/GIF.gif");
+    }
+  </style>
+</head>
+
+<body>
+  <div class = "Header">
+    <form>
+      <input class="HeaderLinks" type="button" value="Home"
+      onclick="window.location.href='index.html'">
+
+      <input class="HeaderLinks" type="button" value="Course Team"
+      onclick="window.location.href='Course_Team.html'">
+
+      <input class="HeaderLinks" type="button" value="Assignments"
+      onclick="window.location.href='Assignments.html'">
+
+      <input class="HeaderLinks" type="button" value="Syllabus"
+      onclick="window.location.href='Extra Files/Syllabus.pdf'">
+
+      <input class="HeaderLinks" type="button" value="Markus"
+      onclick="window.location.href='https://markus.utsc.utoronto.ca/cscb20w18/?locale=en'">
+
+      <input class="HeaderLinks" type="button" value="Labs"
+      onclick="window.location.href='Labs.html'">
+
+      <input class="HeaderLinks" type="button" value="Piazza"
+      onclick="window.location.href='https://piazza.com/class/jcpjjp5l4bywd'">
+
+      <input class="HeaderLinks" type="button" value="Feedback"
+      onclick="window.location.href='Feedback.html'">
+    </form>
+  </div>
+
+  <div id = "HomeHeader" class = "PageHeader"></div>
+
+  <div id = "Logo">
+    <img src="pics/UofT_Logo.png" height="250" width="500">
+  </div>
+
+
+  <div class = "TextTitle Text">
+    <b>OVERVIEW</b>
+  </div>
+  <div class = "Text">
+    <p>A practical introduction to databases and Web app development. Databases: terminology and applications;
+      creating, querying and updating databases; the entity-relationship model for database design.
+      Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content;
+      Web application development and interface with databases.</p>
+    <p><b>Prerequisite:</b> Some experience with programming in an imperative language such as Python, Java or C.</p>
+    <p><b>Exclusion:</b> This course may not be taken after - or concurrently with - any C- or D-level CSC course.</p>
+  </div>
+
+  <div class = "TextTitle Text">
+    <b>NEWS & ANNOUNCEMENTS</b>
+  </div>
+
+  <div class = "Text">
+    <p>- Tutorials start January 2nd.</p>
+    <p>- Midterm March 8th.</p>
+    <p>- Exam April 12.</p>
+  </div>
+
+  <div id = "MapTitle">
+    <b>MAP OF UTSC</b>
+  <div>
+
+  <div id="map">
+  </div>
+  <script>
+    function initMap() {
+      var location = {lat: 43.784, lng: -79.186};
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 18,
+        center: location,
+        mapTypeId:google.maps.MapTypeId.SATELLITE
+      });
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAswU7yeYU4LV3ue9aGtUpUro9vWIVuqE&callback=initMap">
+  </script>
+
+  <div class = "Footer">
+    <div id = "Faculty">
+      <form>
+        <input class="FooterLinks" type="button" value="Faculty of Computer Science at UofT"
+        onclick="window.location.href='http://www.utsc.utoronto.ca/cms/faculty-of-computer-science'">
+    </div>
+
+    <div class="FooterLinks" id = "Creators">
+      Site was created by Tejasvi Singh and Pantysh Ghurburrun.
+    </div>
+  </div>
+</body>
+</html>

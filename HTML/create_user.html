@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      padding: 12px 28px;
+      margin: 8px 0;
+      border: none;
+      width: 100%;
+    }
+  </style>
+
+  <head>
+  </head>
+
+  <body>
+    <h2>Create User</h2>
+    <form action="create_user.php" method="post">
+
+      <label for="fn"><b>Firstname:</b></label>
+      <input type="text" name="firstname" required>
+
+      <label for="ln"><b>Lastname:</b></label>
+      <input type="text" name="lastname" required>
+
+      <label for="us"><b>Username:</b></label>
+      <input type="text" name="user" required>
+
+      <label for="pswd"><b>Password:</b></label>
+      <input type="password" name="pass" required>
+
+      <label><b>Usertype:</b></label>
+      <select name="usertype">
+    <option value="Student">Student</option>
+  	<option value="TA">TA</option>
+  	<option value="Instructor">Instructor</option>
+	</select>
+
+      <button type="submit">Register</button>
+      </div>
+    </form>
+  </body>
+
+</html>
